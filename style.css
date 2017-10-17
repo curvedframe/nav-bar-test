@@ -1,0 +1,46 @@
+*{
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+#bodyWrapper{
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#Nav {
+    background: grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Nav nav{
+    padding:20px;
+    
+}
+
+#Nav .nav-logo{
+    background-image: url(Images/DAQ_nav_0000_DAQ_logo_White-01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 250px;
+    text-indent: -10000;
+} 
+
+#Nav ul{
+    list-style-type: none;
+    display: flex;
+    
+}
+
+#Nav li{
+    flex: 1 1 0;
+    flex-basis: 1;
+}
+
+#Nav a{
+    text-decoration: none;
+    color: white;
+    padding: 100px;
+}
