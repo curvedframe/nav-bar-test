@@ -1,0 +1,82 @@
+*{
+    font-family: helvetivca, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    //text-transform: uppercase;
+}
+
+#bodyWrapper{
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#Nav {
+    background: #403F3D;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Nav .nav-logo{
+    background-image: url(Images/DAQ_nav_0000_DAQ_logo_White-01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -1000px;
+    min-width: 250px;
+}
+
+#Nav nav{
+    
+}
+
+#Nav ul{
+    display:flex;
+    list-style-type: none;
+}
+
+#Nav a{
+    color:white;
+    text-decoration: none;
+    padding: 33px 20px;
+}
+
+#Nav a:hover {
+    background: lightgray;
+    background: #FAAC2B;
+}
+
+@media screen and (max-width: 760px){
+    
+    #Nav {
+        display:block;
+        padding: 0px;
+
+    }
+    
+    #Nav .nav-logo{
+        height: 60px;
+    }
+    
+    #Nav ul{
+        background: #666766;
+        display:block;
+        padding:0;
+        text-align: center;
+    }
+    
+    #Nav a{
+        display: block;
+        padding: 20px;
+    }
+    
+    #Nav a:hover {
+        //background: #FAAC2B;
+    }
+    
+    
+    
+    
+    
+    
+}
