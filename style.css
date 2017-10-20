@@ -5,11 +5,11 @@
 
 @font-face {
     font-family: EurostileLTStd Bold Ext2;
-    src: url('../Font/EurostileLTStd-BoldEx2.otf');
+    src: url(Font/EurostileLTStd-BoldEx2.otf);
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 35px;
     font-family: EurostileLTStd Bold Ext2;
     text-align: center;
     color: #413f3d;
@@ -18,10 +18,17 @@ h1 {
       
 }
 
+h2 {
+    font-size: 12px;
+    font-family: EurostileLTStd Bold Ext2;
+    text-align: center;
+    color: white;
+      
+}
+
 body {
-    
-    width: 1000px;
     margin: 0 auto;
+
 }
 
 #Nav {
@@ -29,7 +36,7 @@ body {
     width: 100%;
     height: 100%;
     max-height: 20px;
-    max-width: 1000px;
+    //max-width: 1000px;
     background: linear-gradient(to bottom, rgba(114,114,114,0.8) 0%,rgba(64,63,61,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc727272', endColorstr='#e6403f3d',GradientType=0 ); /* IE6-9 */
     box-shadow: 0px 3px 2px rgba(0,0,0,0.3);
@@ -72,19 +79,21 @@ body {
 #Nav a{
     color:white;
     position:relative;
-    top: 40px;
+    top: 42px;
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 9px 20px;
     text-transform:uppercase;
     font-size: 12px;
     font-kerning: 12px;
     letter-spacing: 1.2px;
+    //border-radius: 6px 6px 0 0;
     transition: background 0.2s 0.1s, color 0.3s;
 }
 
 #Nav a:hover {
     background: #FAAC2B;
     color: #403F3D;
+    //border-radius: 6px 6px 0 0;
 	-webkit-animation: shadow-drop-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shadow-drop-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -93,7 +102,8 @@ body {
 
 .top-container {
     background-image: url(Images/bg-drone.jpg);
-    background-repeat: no-repeat;
+    background-position: center;
+    //background-repeat: no-repeat;
     text-indent: -10000px;
     height: 494px;
 }
@@ -105,6 +115,20 @@ body {
     margin-bottom: 40px;
 }
 
+/*PRODUCT CONTAINER*/
+
+
+#productCont .title{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#productCont .features{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
 
 #productCont .features {
     height: 100%;
@@ -122,18 +146,28 @@ body {
 
 #productCont p{
     width: 80%;
-    text-overflow: clip;
+    max-width: 300px;
+    //text-overflow: clip;
     text-align: center;
     margin: 0 auto;
 }
 
+/*MID CONTAINER*/
+
 .midContent {
     background-image: url(Images/bg-drone.jpg);
+    background-position: center;
     width: 100%;
     height: 496px;
     margin-bottom: 60px;
 }
 
+/*MARKETPLACE CONTAINER*/
+#lastContaier{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
 
 #lastContaier .yellow-banner {
     background-color: #FAAC2B;
@@ -144,18 +178,145 @@ body {
 }
 
 #lastContaier .market-phone{
-    margin:-50px 40%;
+    margin:-50px 40%;    
+}
+
+#lastContaier p{
+    text-align: center;
+    margin: 0;
+}
+
+
+/*FOOTER CONTAINER*/
+
+#footer{
     
+
 }
 
 #footer .footer-info{
-   
-    background: darkgray;
+    background: #413f3d;
     width: 100%;
     height: 400px;
+}
+
+.footer-info{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    color: white;
+    justify-content: center;
+}
+
+#footer .footer-logo {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 60px;
+    flex: 1 1 0;
+}
+
+
+#footer .footer-logo .DAQ-Footer-logo{
+    width: 70%;
+}
+
+#footer .footer-info .footer-logo p{
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+#footer .footer-info .quick-menu{
+    width: 100%;
+    max-width: 250px;
+    margin-top:60px;
+    flex: 1 1 0;
+}
+
+
+    
+#footer .footer-info ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+
+#footer .footer-info .quick-menu h2{
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 170px;
+    margin: 0 auto;
+}
+
+#footer .footer-info .quick-menu a{
+    text-decoration: none;
+    color:white;
+    display: block;
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 170px;
+    margin: 0 auto;
+}
+
+#footer .footer-info .more-info{
+    width: 100%;
+    max-width: 250px;
+    margin-top: 60px;
+    margin-left: 20px;
+    flex: 1 1 0;
+}
+
+#footer .footer-info .more-info p{
+    margin: 0 0 20px; 0;
+}
+
+
+#footer .footer-info .more-info h2{
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 170px;
+    margin:0 auto;
+}
+
+
+#footer .footer-info .more-info .apple-logo{
+    
+    width: 100%;
+    max-width: 150px;
+}
+
+#footer .footer-info .separator{
+    margin-top: 48px;
+    width: 1px;
+    height: 275px;
+    background: white;
 
 }
-/* RESPONSIVE */
+
+#footer .footer-info .form{
+    
+    margin-bottom: 20px;
+}
+
+#footer .footer-info .form .subscribe-button{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0 8px 8px 0;
+    background: #FAAC2B;
+}
+
+
+#footer .footer-info .form input{
+    padding:0;
+    margin: 0;
+    height: 30px;
+}
+
+/* ------- RESPONSIVE --------*/
  
 @media screen and (max-width:760px){
     
