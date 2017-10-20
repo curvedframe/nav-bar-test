@@ -1,46 +1,219 @@
 *{
-    font-family: sans-serif;
+    font-family: helvetivca, sans-serif;
     font-size: 13px;
 }
 
-#bodyWrapper{
-    width:100%;
-    max-width: 1200px;
+@font-face {
+    font-family: EurostileLTStd Bold Ext2;
+    src: url('../Font/EurostileLTStd-BoldEx2.otf');
+}
+
+h1 {
+    font-size: 40px;
+    font-family: EurostileLTStd Bold Ext2;
+    text-align: center;
+    color: #413f3d;
+    //background: red;
+    margin:3px auto;
+      
+}
+
+body {
+    
+    width: 1000px;
     margin: 0 auto;
 }
 
 #Nav {
-    background: grey;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-height: 20px;
+    max-width: 1000px;
+    background: linear-gradient(to bottom, rgba(114,114,114,0.8) 0%,rgba(64,63,61,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc727272', endColorstr='#e6403f3d',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0px 3px 2px rgba(0,0,0,0.3);
+    padding: 20px 0px;
     display: flex;
     justify-content: space-between;
-}
-
-#Nav nav{
-    padding:20px;
+    top: -100px;
+    margin:0 auto;
+    animation: pullBar 1.8s 4s cubic-bezier(.05,.9,.68,.99) forwards;
     
 }
 
 #Nav .nav-logo{
     background-image: url(Images/DAQ_nav_0000_DAQ_logo_White-01.png);
-    background-position: center;
     background-repeat: no-repeat;
-    width: 250px;
-    text-indent: -10000;
-} 
+    background-position: center;
+    background-size: 70%;
+    text-indent: -1000px;
+    min-width: 200px;
+    min-height: 45px;
+    margin: -13px 23px;
+}
+
 
 #Nav ul{
+    display:flex;
     list-style-type: none;
-    display: flex;
-    
+
 }
 
 #Nav li{
-    flex: 1 1 0;
-    flex-basis: 1;
+    margin-top: -40px;
+    height: 67px;
+    transition: background 0.2s 0.1s, color 0.3s;
 }
 
+#Nav li:hover {
+    background: rgba(239, 155, 19, 0.5);
+}
 #Nav a{
+    color:white;
+    position:relative;
+    top: 40px;
     text-decoration: none;
-    color: white;
-    padding: 100px;
+    padding: 12px 20px;
+    text-transform:uppercase;
+    font-size: 12px;
+    font-kerning: 12px;
+    letter-spacing: 1.2px;
+    transition: background 0.2s 0.1s, color 0.3s;
+}
+
+#Nav a:hover {
+    background: #FAAC2B;
+    color: #403F3D;
+	-webkit-animation: shadow-drop-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-drop-lr 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/*CONTAINERS*/
+
+.top-container {
+    background-image: url(Images/bg-drone.jpg);
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+    height: 494px;
+}
+
+.sponsors{
+    height:80px;
+    background: #FAAC2B;
+    text-indent: -10000px;
+    margin-bottom: 40px;
+}
+
+
+#productCont .features {
+    height: 100%;
+    display: flex;
+}
+
+#productCont .phones{
+    margin:44px 1.2%;
+    
+}
+
+#productCont .snippets {
+    margin-top: 30px;
+}
+
+#productCont p{
+    width: 80%;
+    text-overflow: clip;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.midContent {
+    background-image: url(Images/bg-drone.jpg);
+    width: 100%;
+    height: 496px;
+    margin-bottom: 60px;
+}
+
+
+#lastContaier .yellow-banner {
+    background-color: #FAAC2B;
+    height: 285px;
+    width: 100%;
+    margin: 100px 0px;
+    
+}
+
+#lastContaier .market-phone{
+    margin:-50px 40%;
+    
+}
+
+#footer .footer-info{
+   
+    background: darkgray;
+    width: 100%;
+    height: 400px;
+
+}
+/* RESPONSIVE */
+ 
+@media screen and (max-width:760px){
+    
+    #Nav {
+        display: block;
+        padding: 0px;
+        margin: 0 auto;
+        width: 100%;
+        left: 0px;
+    }
+    
+    #Nav .nav-logo{
+        height: 60px;
+    }
+    
+    #Nav ul{
+        background: #666766;
+        display:block;
+        padding:0;
+        text-align: center;
+    }
+    
+    #Nav a{
+        display: block;
+        padding: 20px;
+    }
+    
+    #Nav a:hover {
+        //background: #FAAC2B;
+    }
+}
+
+/* KEYFRAMES */
+
+@keyframes pullBar {
+    
+    from{top:-100px;}
+    to{top:0px;}
+
+}
+
+@-webkit-keyframes shadow-drop-lr {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.5), 12px 0 20px -12px rgba(0, 0, 0, 0.5);
+            box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.5), 12px 0 20px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes shadow-drop-lr {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.5), 12px 0 20px -12px rgba(0, 0, 0, 0.5);
+            box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.5), 12px 0 20px -12px rgba(0, 0, 0, 0.5);
+  }
 }

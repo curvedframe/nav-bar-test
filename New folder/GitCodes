@@ -1,7 +1,0 @@
-#This are some of the git & CMD keywords
-
-# git init -> Initiate git repository
-# touch index.html -> generates an HTML file 
-# mkdir -> creates directory
-# git config --global user.name '' -> config name
-# .gitignore -> ignore list from git repository.tp
